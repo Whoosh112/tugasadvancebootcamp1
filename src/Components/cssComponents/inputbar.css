@@ -1,0 +1,20 @@
+.inputbar {
+    display: flex;
+    flex-direction: column;    
+    margin: 5px;
+  }
+
+  input{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    border-width: thin;
+    width: 425px;
+    height: 45px;
+    padding: 10px;
+    background-color: rgba(50,50,50,0.6);
+    border-style: solid;
+    border-color: gray;
+    color: white;
+  }

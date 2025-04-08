@@ -1,0 +1,108 @@
+.box{
+    width: 80vw;
+    height: 40vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+     background:linear-gradient(180deg, rgba(18,18,18,0), rgba(18,18,18,1)), url("/assets/assetgambar/assetgambarberanda/dutyafterschoolherobanner.png");
+    background-size: cover; background-repeat: no-repeat; background-position: center;
+  }   
+
+  .isibox{
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+  }
+
+  .boxtombol {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+ .boxtombol > .kiri{
+    margin-left: 30px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  .boxtombol > .kiri > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; 
+    border-radius: 50px;
+    padding:10px;
+    color: white;
+  }
+
+  .boxtombol > .kiri > .mulai{
+    width: 60px;
+    height: 35px;
+    background: blue;
+  }
+
+  .boxtombol > .kiri > .selengkapnya{
+    width: 150px;
+    height: 35px;
+    background: rgb(50,50,50);
+    gap: 10px;
+  }
+
+
+  .boxtombol > .kiri > .batasusia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: grey; 
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .boxtombol > .kanan {
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  .boxtombol > .kanan > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: transparent;
+    border-color: grey; 
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  
+  @media only screen and (max-width: 600px){
+
+  .isibox > p{
+    font-size: 14px;
+  }
+
+  .kotakfilm p {
+    margin-left: 775px; 
+  }
+
+  .kotakfilm {
+    padding: 20px; 
+  }
+}
+
+@media only screen and (max-height: 1200px){
+
+  .isibox > p{
+    font-size: 14px;
+  }
+
+}

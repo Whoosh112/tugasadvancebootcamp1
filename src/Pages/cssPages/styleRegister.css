@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.registerpage {
+  background:url("/assets/assetgambar/gambarregister.jpg");
+  background-size: cover; background-repeat: no-repeat; background-position: center;
+}
+
+.registerscreen {
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
+  flex-direction: column;    
+  background-color: rgba(50,50,50,0.4);
+  width: 480px;
+  height: 675px;
+  color: white;
+  gap: 25px;
+  border-radius: 25px;
+  }
+
+  .judul{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    flex-direction: column;    
+  }
+  
+  .logo{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+  }
+
+  .username{
+    display: flex;
+    justify-content: center;  
+  }
+
+  .katasandi{
+    display: flex;
+    justify-content: center;  
+  }
+
+  .loginbuttonbox{
+    display: flex;
+    justify-content: center;  
+    flex-direction: column;    
+  }

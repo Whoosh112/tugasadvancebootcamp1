@@ -1,0 +1,32 @@
+.loginbuttonbox{
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    flex-direction: column;
+    margin: 5px;
+  }
+  
+  button{
+    font-size: 1rem;
+    outline: none;
+    border-radius: 20px;
+    width: 425px;
+    height: 35px;
+    border-width: thin;
+    border-color: rgb(96,96,96);
+    color: white;
+    margin: 5px;
+  }
+  
+  .loginconfirm{
+    background-color: rgba(70,70,70);
+    border-style: solid;
+  }
+  
+  .loginconfirmgoogle{
+    display: flex;
+    background-color: rgba(50,50,50,0.6);
+    border-style: solid;
+    justify-content: center;  
+    align-items: center;
+  }

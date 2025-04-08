@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginpage {
+  background:url("/assets/assetgambar/gambarlogin.jpg");
+  background-size: cover; background-repeat: no-repeat; background-position: center;
+}
+
+.loginscreen {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    flex-direction: column;    
+    background-color: rgba(50,50,50,0.4);
+    width: 480px;
+    height: 600px;
+    color: white;
+    gap: 25px;
+    border-radius: 25px;
+  }
+  
+  .logo{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+  }
+
+  .username{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+  }
+
+  .sudahpunyaakun{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+  }
+
+  .loginbuttonbox{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    flex-direction: column;    
+  }

@@ -1,0 +1,79 @@
+.lanjutfilm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  .lanjutfilm0, .lanjutfilm1, .lanjutfilm2, .lanjutfilm3 {
+    padding: 10px;
+    text-align: center;
+    width: 320px;
+    height: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    align-content: flex-end;
+    background-size: cover; background-repeat: no-repeat; background-position: center;
+}
+
+  .lanjutfilm2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .namafilmbluelock{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0;
+  }
+
+  .namafilm{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .rating{
+    display: flex;
+    justify-content: center; 
+  }
+
+
+  .episodebaru {
+    background: blue;
+    font-size: 20px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.tombolkiri {
+  position: relative;
+  left: 30px;
+  background: transparent;
+  border: 0
+}
+
+.tombolkanan {
+  position: relative;
+  right: 30px;
+  background: transparent;
+  border: 0
+}
+
+@media only screen and (max-width: 600px) {
+
+.lanjutfilm{
+  margin-left: 780px; 
+}
+
+.episodebaru{
+  font-size: 11px;
+}
+
+.tombolkiri, .tombolkanan{
+  display: none;
+}
+}
