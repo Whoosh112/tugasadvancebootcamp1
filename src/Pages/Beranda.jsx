@@ -8,7 +8,7 @@ import FilmTrending from "../Components/FilmTrending";
 import RilisBaru from "../Components/RilisBaru";
 import Footer from "../Components/Footer";
 
-
+import { BASE_URL } from '../api/config';
 import "./cssPages/styleBeranda.css"
 
 function Beranda ({onLogout}) {

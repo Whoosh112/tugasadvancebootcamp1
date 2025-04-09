@@ -6,9 +6,9 @@ import KataSandi from "../Components/KataSandi";
 import LoginButtonBox from "../Components/LoginButtonBox";
 import MasalahLogin from "../Components/MasalahLogin";
 
-
 const logoChill = "/assets/assetgambar/logochill.png";
 
+import { BASE_URL } from '../api/config';
 import "./cssPages/styleLogin.css"
 
 

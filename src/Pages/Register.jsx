@@ -11,10 +11,13 @@ import WelcomeRegister from "../Components/WelcomeRegister";
 
 const logoChill = "/assets/assetgambar/logochill.png";
 
+
+import { BASE_URL } from '../api/config';
 import "./cssPages/styleRegister.css"
 
 
 function Register () {
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
