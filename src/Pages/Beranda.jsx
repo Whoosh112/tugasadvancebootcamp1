@@ -8,11 +8,30 @@ import FilmTrending from "../Components/FilmTrending";
 import RilisBaru from "../Components/RilisBaru";
 import Footer from "../Components/Footer";
 
-import { BASE_URL } from '../api/config';
+import { getUserByUsername, deleteUser } from '../api/userApi';
 import "./cssPages/styleBeranda.css"
 
 function Beranda ({onLogout}) {
 const user = JSON.parse(localStorage.getItem("user"));
+
+const handleDelete = async () => {
+    setError("");
+  
+    try {
+      const users = await getUserByUsername(username);
+      const matchedUser = users.find(user => user.password === password);
+
+      if (matchedUser) {
+        localStorage.setItem("user", JSON.stringify(matchedUser));
+        navigate("/beranda");
+      } else {
+        setError("Username atau password salah!");
+      }
+    } catch {
+      setError("Terjadi kesalahan saat login.");
+    }
+  };
+
 useEffect(() => {
         document.body.classList.add("berandapage");
     
@@ -25,7 +44,7 @@ return (
     <>
     <div className="beranda">
       <div className="navbar">
-          <Navbar user={user} onLogout={onLogout}/>
+          <Navbar user={user} onLogout={onLogout} onDelete={handleDelete()}/>
       </div>
       <div className="hero">
           <Hero />

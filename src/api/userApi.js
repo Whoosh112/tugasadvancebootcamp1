@@ -1,17 +1,24 @@
 import { BASE_URL } from './config';
 
-export async function getUsers() {
-  const res = await fetch(`${BASE_URL}/users`);
+export const getUsers = async () =>{
+  const res = await fetch(`${BASE_URL}/usersdata`);
   return res.json();
 }
 
-export async function getUserByCredentials(username, password) {
-  const res = await fetch(`${BASE_URL}/users?username=${username}&password=${password}`);
-  return res.json();
-}
+export const getUserByUsername = async (username) => {
+  const res = await fetch(`${BASE_URL}/usersdata?username=${username}`);
+  if (!res.ok) {
+    return [];
+  }
+  const data = await res.json();
+  if (!Array.isArray(data)) {
+    return []; 
+  }
+  return data;
+};
 
-export async function addUser(userData) {
-  const res = await fetch(`${BASE_URL}/users`, {
+export const addUser = async (userData) => {
+  const res = await fetch(`${BASE_URL}/usersdata`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(userData),
@@ -19,8 +26,8 @@ export async function addUser(userData) {
   return res.json();
 }
 
-export async function updateUser(id, updates) {
-  const res = await fetch(`${BASE_URL}/users/${id}`, {
+export const updateUser = async (id, updates) => {
+  const res = await fetch(`${BASE_URL}/usersdata/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(updates),
@@ -28,8 +35,8 @@ export async function updateUser(id, updates) {
   return res.json();
 }
 
-export async function deleteUser(id) {
-  const res = await fetch(`${BASE_URL}/users/${id}`, {
+export const deleteUser = async (id) => {
+  const res = await fetch(`${BASE_URL}/usersdata/${id}`, {
     method: 'DELETE',
   });
   return res.json();

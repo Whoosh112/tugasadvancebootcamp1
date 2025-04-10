@@ -12,7 +12,7 @@ import WelcomeRegister from "../Components/WelcomeRegister";
 const logoChill = "/assets/assetgambar/logochill.png";
 
 
-import { BASE_URL } from '../api/config';
+import { addUser, getUserByUsername } from '../api/userApi'; 
 import "./cssPages/styleRegister.css"
 
 
@@ -24,23 +24,34 @@ function Register () {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
+    setError("");
+  
     if (!username || !password || !confirmPassword) {
       setError("Semua input harus diisi!");
       return;
     }
-
+  
     if (password !== confirmPassword) {
       setError("Password tidak sama!");
       return;
     }
-
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-    existingUsers.push({ username, password });
-    localStorage.setItem("users", JSON.stringify(existingUsers));
-
-    alert("Registrasi berhasil! Kamu sekarang bisa masuk.");
-    navigate("/login");
+  
+    try {
+      const existingUsers = await getUserByUsername(username);
+      console.log("Existing users:", existingUsers); // ← helpful debug line
+      if (existingUsers.length > 0) {
+        setError("Username sudah digunakan!");
+        return;
+      }
+  
+      await addUser({ username, password });
+      alert("Registrasi berhasil! Kamu sekarang bisa masuk.");
+      navigate("/login");
+    } catch (err) {
+      console.error("Register error:", err);
+      setError("Terjadi kesalahan saat registrasi.");
+    }
   };
 
   useEffect(() => {

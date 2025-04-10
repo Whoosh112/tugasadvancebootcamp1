@@ -8,32 +8,37 @@ import MasalahLogin from "../Components/MasalahLogin";
 
 const logoChill = "/assets/assetgambar/logochill.png";
 
-import { BASE_URL } from '../api/config';
 import "./cssPages/styleLogin.css"
-
-
-function Login ({onLogin}) {
+import { getUserByUsername } from '../api/userApi';
+function Login () {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const user = existingUsers.find((u) => u.username === username && u.password === password);
-
+  const handleLogin = async () => {
+    setError("");
+  
     if (!username || !password) {
       setError("Harap mengisi input dengan lengkap!");
       return;
     }
+  
+    try {
+      const users = await getUserByUsername(username);
+      const matchedUser = users.find(user => user.password === password);
 
-    if (user) {
-      onLogin(username);
-      navigate("/beranda");
-    } else {
-      setError("Username atau password salah!");
+      if (matchedUser) {
+        localStorage.setItem("user", JSON.stringify(matchedUser));
+        navigate("/beranda");
+      } else {
+        setError("Username atau password salah!");
+      }
+    } catch {
+      setError("Terjadi kesalahan saat login.");
     }
   };
+
   useEffect(() => {
     document.body.classList.add("loginpage");
 

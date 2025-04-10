@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import "./cssComponents/navbar.css"
 
 
-function Navbar({onLogout, user}){
+function Navbar({onLogout, user, onDelete}){
     const navigate = useNavigate();
     const [optionDown, setOptionDown] = useState(false)
     const handleOptionDown = () => {
@@ -37,6 +37,7 @@ function Navbar({onLogout, user}){
                             <div className="profileoption">Profil</div>
                             <div className="ubahkepremiumoption">Ubah Ke Premium</div>
                             <div className="keluaroption" onClick={() => {onLogout(); confirmLogout();}}>Keluar</div>
+                            <div className="hapusoption" onClick={() => {onDelete(); confirmLogout();}}>Hapus</div>
                         </div>
                             }
                 </div>

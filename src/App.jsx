@@ -18,12 +18,6 @@ function App() {
 	  }
 	}, []);
   
-	const handleLogin = (username) => {
-	  const userData = { username };
-	  localStorage.setItem("user", JSON.stringify(userData));
-	  setUser(userData);
-	};
-  
 	const handleLogout = () => {
 	  localStorage.removeItem("user");
 	  setUser(null);
@@ -34,7 +28,7 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Register />} />
-				<Route path="/login" element={<Login onLogin={handleLogin}/>} />
+				<Route path="/login" element={<Login />} />
 				<Route path="/beranda" element={<Beranda user={user} onLogout={handleLogout}/>} />
 				<Route path="/favorit" element={<Favorit user={user} onLogout={handleLogout}/>} />
 			</Routes>
