@@ -15,22 +15,21 @@ function Beranda ({onLogout}) {
 const user = JSON.parse(localStorage.getItem("user"));
 
 const handleDelete = async () => {
-    setError("");
-  
-    try {
-      const users = await getUserByUsername(username);
-      const matchedUser = users.find(user => user.password === password);
 
-      if (matchedUser) {
-        localStorage.setItem("user", JSON.stringify(matchedUser));
-        navigate("/beranda");
-      } else {
-        setError("Username atau password salah!");
-      }
-    } catch {
-      setError("Terjadi kesalahan saat login.");
-    }
-  };
+  try {
+    const users = await getUserByUsername(user.username);
+    const matchedUser = users.find(u => u.password === user.password);
+
+    if (matchedUser) {
+      await deleteUser(matchedUser.id);
+      alert("Akun berhasil dihapus.");
+      localStorage.removeItem("user");
+    } 
+  } catch (err) {
+    console.error("Delete error:", err);
+    alert("Terjadi kesalahan saat menghapus akun.");
+  }
+};
 
 useEffect(() => {
         document.body.classList.add("berandapage");
@@ -44,7 +43,7 @@ return (
     <>
     <div className="beranda">
       <div className="navbar">
-          <Navbar user={user} onLogout={onLogout} onDelete={handleDelete()}/>
+          <Navbar user={user} onLogout={onLogout} onDelete={handleDelete}/>
       </div>
       <div className="hero">
           <Hero />
