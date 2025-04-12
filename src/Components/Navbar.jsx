@@ -37,6 +37,7 @@ function Navbar({onLogout, user, onDelete}){
                             <div className="profileoption">Profil</div>
                             <div className="ubahkepremiumoption">Ubah Ke Premium</div>
                             <div className="keluaroption" onClick={() => {onLogout(); confirmLogout();}}>Keluar</div>
+                            <div className="gantipassword" onClick={() => navigate("/ubahpassword")}>Ganti Password</div>
                             <div className="hapusoption" onClick={() => {onDelete(); confirmLogout();}}>Hapus</div>
                         </div>
                             }

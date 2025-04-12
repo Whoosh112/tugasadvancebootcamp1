@@ -27,6 +27,8 @@ function Login () {
     try {
       const users = await getUserByUsername(username);
       const matchedUser = users.find(user => user.password === password);
+      console.log("Update response:", users); 
+
 
       if (matchedUser) {
         localStorage.setItem("user", JSON.stringify(matchedUser));

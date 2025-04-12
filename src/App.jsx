@@ -3,6 +3,8 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Beranda from "./Pages/Beranda";
 import Favorit from "./Pages/Favorit";
+import UbahPassword from "./Pages/UbahPassword";
+
 import { useState, useEffect } from "react";
 
 
@@ -31,6 +33,7 @@ function App() {
 				<Route path="/login" element={<Login/>} />
 				<Route path="/beranda" element={<Beranda user={user} onLogout={handleLogout}/>} />
 				<Route path="/favorit" element={<Favorit user={user} onLogout={handleLogout}/>} />
+				<Route path="/ubahpassword" element={<UbahPassword  user={user} onLogout={handleLogout}/>} />
 			</Routes>
 		</BrowserRouter>
 	);
