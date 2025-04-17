@@ -39,39 +39,39 @@ useEffect(() => {
         };
       }, []);
 
-return (
-    <>
-    <div className="beranda">
-      <div className="navbar">
-          <Navbar user={user} onLogout={onLogout} onDelete={handleDelete}/>
-      </div>
-      <div className="hero">
-          <Hero />
-      </div>
-      <div className="kotakfilm">
-        <div className="melanjutkantontonfilm">
-            <p>Melanjutkan Tonton Film</p>
-            <MelanjutkanTontonFilm />
+      return (
+        <>
+        <div className="beranda">
+          <div className="navibar">
+              <Navbar onLogout={onLogout}/>
+          </div>
+          <div className="hero">
+              <Hero />
+          </div>
+          <div className="kotakfilm">
+            <div className="melanjutkantontonfilm">
+                <p>Melanjutkan Tonton Film</p>
+                <MelanjutkanTontonFilm />
+            </div>
+            <div className="tempatfilm1">
+                <p>Top Rating Film Dan Series Hari Ini</p>
+                <TopRatingFilm />
+            </div>
+            <div className="tempatfilm2">
+                <p>Film Trending</p>
+                <FilmTrending />
+            </div>
+            <div className="tempatfilm3">
+                <p>Rilis Baru</p>
+                <RilisBaru />
+            </div>
+          </div>
+          <div className="footer">
+                <Footer />
+            </div>
         </div>
-        <div className="tempatfilm1">
-            <p>Top Rating Film Dan Series Hari Ini</p>
-            <TopRatingFilm />
-        </div>
-        <div className="tempatfilm2">
-            <p>Film Trending</p>
-            <FilmTrending />
-        </div>
-        <div className="tempatfilm3">
-            <p>Rilis Baru</p>
-            <RilisBaru />
-        </div>
-      </div>
-      <div className="footer">
-            <Footer />
-        </div>
-    </div>
-    </>
-    )
-};
-
-export default Beranda;
+        </>
+        )
+    };
+    
+    export default Beranda;

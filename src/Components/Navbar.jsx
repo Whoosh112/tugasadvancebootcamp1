@@ -22,14 +22,13 @@ function Navbar({onLogout, onDelete}){
     return (
     <>
         <nav className="navbar">
-        <ul>
+            <ul>
                 <img src={logoChill} className="logochill"/>
                 <img src={logoChillKecil} className="logochillkecil"/>
                 <li>Series</li>
                 <li>Film</li>
                 <li>Daftar Saya</li>
             </ul>
-
             <div className="profile">
                 <img src={avatar} alt="avatar" className="avatar"/>
                 <div className="optionbar" onClick={handleOptionDown}>
