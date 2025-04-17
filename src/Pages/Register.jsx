@@ -57,31 +57,31 @@ function Register () {
   }, []);
   
   return (
-  <form className="registerscreen">
-        <div className="logo">
-          <img src={logoChill} width="50%"/>
-        </div>
-        <div className="judul">
-          <WelcomeRegister/>
-        </div>
-          <div className="username">
-            <Username value={username} onChange={(e) => setUsername(e.target.value)} error={error}/>
+    <form className="registerscreen">
+          <div className="logo">
+            <img src={logoChill} className="logochillregister"/>
           </div>
-          <div className="katasandi">
-           <KataSandi value={password} onChange={(e) => setPassword(e.target.value)}/>
+          <div className="tempatjudul">
+            <WelcomeRegister/>
           </div>
-          <div className="katasandiulang">
-           <KataSandiUlang value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
-           />
+            <div className="username">
+              <Username value={username} onChange={(e) => setUsername(e.target.value)} error={error}/>
+            </div>
+            <div className="katasandi">
+             <KataSandi value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </div>
+            <div className="katasandiulang">
+             <KataSandiUlang value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
+             />
+            </div>
+            <div className="masalahlogin">
+              <SudahPunyaAkun />
+            </div>
+            <div className="loginbuttonbox">
+              <LoginButtonBox onClick={(e) => {e.preventDefault(); handleRegister()}}/>
           </div>
-          <div className="masalahlogin">
-            <SudahPunyaAkun />
-          </div>
-          <div className="loginbuttonbox">
-            <LoginButtonBox onClick={(e) => {e.preventDefault(); handleRegister()}}/>
-        </div>
-  </form>
-        )
-};
-
-export default Register;
+    </form>
+          )
+  };
+  
+  export default Register;
