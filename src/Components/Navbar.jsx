@@ -1,4 +1,5 @@
 const logoChill = "/assets/assetgambar/logochill.png";
+const logoChillKecil = "/assets/assetgambar/logochillkecil.png";
 const avatar = "/assets/assetgambar/assetgambarberanda/avatar.png";
 const keyboardarrowdown = "/assets/assetgambar/assetgambarberanda/KeyboardArrowDown.png";
 
@@ -8,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import "./cssComponents/navbar.css"
 
 
-function Navbar({onLogout, user, onDelete}){
+function Navbar({onLogout, onDelete}){
     const navigate = useNavigate();
     const [optionDown, setOptionDown] = useState(false)
     const handleOptionDown = () => {
@@ -21,15 +22,16 @@ function Navbar({onLogout, user, onDelete}){
     return (
     <>
         <nav className="navbar">
-            <ul>
-                <img src={logoChill} width="30%"/>
+        <ul>
+                <img src={logoChill} className="logochill"/>
+                <img src={logoChillKecil} className="logochillkecil"/>
                 <li>Series</li>
                 <li>Film</li>
                 <li>Daftar Saya</li>
             </ul>
+
             <div className="profile">
-                <p className="welcomename">Welcome {user.username}</p>
-                <img src={avatar} width="50" height="50" alt="avatar" className="avatar"/>
+                <img src={avatar} alt="avatar" className="avatar"/>
                 <div className="optionbar" onClick={handleOptionDown}>
                     <img src={keyboardarrowdown} width="25" height="25" alt="KeyboardArrowDown" className="KeyboardArrowDown"/>
                     {optionDown && 

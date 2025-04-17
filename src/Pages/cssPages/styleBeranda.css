@@ -20,29 +20,11 @@
   text-align: left;
 }
 
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-      
-.hero {
-  display: flex;         
-  justify-content: center;        
-  margin: 10px;
-  font-size: 20px;
-  align-items: center;
-}
-
 .kotakfilm {
   display: flex;
   flex-direction: column;
   margin: 25px;
-  font-size: 30px;
-}
-
-.kotakfilm > p{
-  margin-left: 35px;
+  font-size: 32px;
 }
 
 .footer{
@@ -56,12 +38,22 @@
   padding: 3% ;
 }
 
-@media only screen and (max-width: 600px){
-  body{
+@media screen and (max-width: 360px){
+html, body{
     overflow-x: hidden;
   }
 
-  .kotakfilm {
-    padding: 20px; 
+
+  .beranda{
+    margin-left: 250px;
+  }
+
+  .kotakfilm  p{
+    margin-left: 350px;
+    font-size: 20px;
+  }
+
+  .footer{
+    margin-right: 250px;
   }
 }

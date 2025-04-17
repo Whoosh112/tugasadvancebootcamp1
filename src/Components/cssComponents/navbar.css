@@ -1,4 +1,21 @@
-  .navbar > ul{
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+}
+
+ .logochill{
+    width: 103.55px;
+    height: 44px;
+    gap: 4px;
+ }
+
+ .logochillkecil{
+  display: none;
+}
+
+ .navbar > ul{
     display: flex;
     align-items: center;
   }
@@ -11,8 +28,10 @@
     margin: 10px;
   }
 
-  .welcomename{
-    margin:5px;
+  .avatar{
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
   }
 
   .profile {
@@ -32,7 +51,41 @@
     top: 55px;
     right: -40px;
     font-size: 14px;
-    background:rgba(24, 26, 28, 1);
+    background-color:rgba(24, 26, 28, 1);
+    color: white;
     width: 120px;
     margin: 5px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+  }
+
+  .profileoption:hover, .ubahkepremiumoption:hover, .keluaroption:hover{
+    color: #0F1E93; 
+  }
+
+  @media only screen and (max-width: 360px){
+
+    .navbar{
+      font-size:10px;
+      margin-right: 250px;
+    }
+
+    .logochill{
+      display: none;
+    }
+
+    .logochillkecil{
+      display: block;
+    }
+    
+    .avatar{
+      height: 20px;
+      width: 20px;
+    }
+
+    .optiondownbox{ 
+      font-size: 10px;
+      top: 20px;
+    }
   }

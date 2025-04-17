@@ -1,10 +1,10 @@
 .filmobject {
     display: flex;
-    padding: 10px;
+    gap: 10px;
     text-align: center;
-    width: 250px;
-    height: 350px;
-    border-radius: 10px;
+    width: 234px;
+    height: 365px;
+    border-radius: 8px;
     font-size: 20px;
     background-size: cover; background-repeat: no-repeat; background-position: center;
 }
@@ -95,9 +95,8 @@
 
 @media only screen and (max-width: 600px) {
   .filmobject {
-      width: 150px;
-      height: 250px;
+      width: 95px;
+      height: 145px;
+      gap: 4px;
   }
-
-
 }

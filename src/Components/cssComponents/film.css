@@ -2,94 +2,91 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
-    gap: 10px;
-    margin: 10px;
+    gap: 28px;
   }
 
-  .films0, .films1, .films2, .films3, .films4 {
-    padding: 10px;
-    text-align: center;
-    width: 250px;
-    height: 350px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-size: cover; background-repeat: no-repeat; background-position: center;
-}
-
 .top10{
-  background: red;
+  background: #B71F1D;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  width: 20%;
-  height: 17%;
-  margin-left: 75%;
-  padding-top: 3%;
+  font-size: 14px;
+  padding: 4px;
+  gap: 10px;
   position: absolute;
-  bottom: 83%;
-  border-radius: 10px 15px;
+  right: 10%;
+  bottom: 86.25%;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .filmwrapper {
   position: relative; 
 }
 
-.episodebaru {
-  display: flex;
-  background: blue;
-  font-size: 20px;
-  width: 200px;
-  border-radius: 10px;
-  margin-left: 5px;
-}
-
 .episodebarufilm {
   display: flex;
-  background: blue;
-  font-size: 20px;
-  width: 200px;
-  border-radius: 10px;
+  background: #0F1E93;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  border-radius: 24px;
+  padding: 4px 10px;
+  gap: 4px;
+  letter-spacing: 0.2px;
   position: absolute;
   bottom: 90%;
   left: 5%;
 }
 
-  .tombolkiri {
-    position: relative;
-    left: 30px;
-    background: transparent;
-    border: 0;
-    z-index: 1
+.tombolkiri {
+  width: 44px;
+  height: 44px;
+  radius: 24px;
+  position: relative;
+  left: 30px;
+  background: transparent;
+  border: 1px;
+  padding: 10px;
+  gap: 10px;
+  z-index: 1;
+}
 
-  }
-  
-  .tombolkanan {
-    position: relative;
-    right: 30px;
-    background: transparent;
-    border: 0;
-    z-index: 1
-  }
+.tombolkanan {
+  width: 44px;
+  height: 44px;
+  radius: 24px;
+  position: relative;
+  right: 50px;
+  background: transparent;
+  border: 1px;
+  padding: 10px;
+  gap: 10px;
+  z-index: 1;
+}
 
 @media only screen and (max-width: 600px) {
   .arrayfilm{
-    margin-left: 250px; 
+    margin-left: 10px; 
   }
 
   .top10{
-    font-size: 11px;
-    border-radius: 5px 10px;
+    font-size:  6.69px;
+    border-top-right-radius: 1.91px;
+    border-bottom-left-radius: 1.91px;
+    padding: 1.91px;
+    gap: 4.78px;
+    right: 10%;
+    bottom: 83.5%;
   }
   
-  .episodebaru{
-    font-size: 11px;
-  }
-
   .episodebarufilm{
-    font-size: 11px;
-    width: 100px;
+    font-size: 5.74px;
+    border-radius: 12px;
+    border: 0.48px;
+    padding: 1.91px 4.78px;
+    gap: 1.19px;
+    letter-spacing: 0.1px;
   }
 
   .tombolkiri, .tombolkanan{

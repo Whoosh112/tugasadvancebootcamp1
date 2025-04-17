@@ -10,9 +10,9 @@ function Hero (){
         <div className="box">
             <div className="isibox">
                 <h1>Duty After School</h1>
-                <p>Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan,<br/>
-                    Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk<br/>
-                    siswa sekolah menengah. Mereka pun segera menjadi<br/>
+                <p>Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan,
+                    Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk
+                    siswa sekolah menengah. Mereka pun segera menjadi
                     pejuang garis depan dalam perang. </p>
             </div>
             <div className="boxtombol">
@@ -22,7 +22,7 @@ function Hero (){
                     <div className="batasusia">18+</div>
                 </div>
                 <div className="kanan">
-                    <button type="button" ><img src={VolumeOff} width="25" height="25" alt="volume-off" className="volume-off"/></button>
+                    <button type="button" ><img src={VolumeOff} alt="volume-off" className="volume-off"/></button>
                 </div>
             </div>
         </div>

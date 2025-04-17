@@ -3,5 +3,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: -5px;
   }
+
+  .judul > h1{
+    font-size: 32px;
+  }
+  
+  .judul > p{
+    font-size: 16px;
+  }
+  

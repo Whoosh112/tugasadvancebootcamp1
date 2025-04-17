@@ -3,24 +3,34 @@
     justify-content: center;  
     align-items: center;     
     flex-direction: column;
-    margin: 5px;
   }
   
   button{
     font-size: 1rem;
     outline: none;
-    border-radius: 20px;
-    width: 425px;
-    height: 35px;
+    border-radius: 24px;
+    width: 449px;
+    height: 50px;
+    border: 1px;
+    padding: 14px 20px;
     border-width: thin;
     border-color: rgb(96,96,96);
     color: white;
-    margin: 5px;
+    gap: 10px;
   }
   
   .loginconfirm{
+    display: flex;
     background-color: rgba(70,70,70);
     border-style: solid;
+    font-size: 14px;
+    justify-content: center;  
+    align-items: center;
+  }
+
+  .logogoogle{
+    width: 18px;
+    height: 18px;
   }
   
   .loginconfirmgoogle{
@@ -30,3 +40,33 @@
     justify-content: center;  
     align-items: center;
   }
+
+  @media screen and (max-width: 360px){
+      button{
+        border-radius: 13.86px;
+        width: 258px;
+        height: 13.86px;
+        border: 0.58px;
+        padding: 8.09px 11.55px;
+        gap: 5.78px;
+      }
+
+      .loginconfirm{
+          font-size: 10px;
+      }
+
+      .loginconfirmgoogle{
+        font-size: 10px;
+
+      }
+
+      .logogoogle{
+        width: 10px;
+        height: 10px;
+      }
+      
+
+      p{
+        font-size: 10px;
+      }
+    }

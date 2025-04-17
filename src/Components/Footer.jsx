@@ -9,7 +9,7 @@ function Footer (){
 <>
         <div className="bagianfooter">
             <div className="bagiancopyright">
-                <img src={logoChill} width="100" height="50" alt="Logo"/>
+                <img src={logoChill} className="logochillfooter" alt="Logo"/>
                 <p>@2023 Chill All Rights Reserved.</p>
             </div>
             <div className="genre">

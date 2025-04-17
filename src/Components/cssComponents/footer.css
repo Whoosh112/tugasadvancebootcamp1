@@ -2,6 +2,11 @@
   display: flex;
 }
 
+.logochillfooter{
+  width: 163px;
+  height: 75px;
+}
+
 .listgenre{
     display: flex;
   }
@@ -31,12 +36,23 @@
     margin: 0 40%;
   }
   
-  @media only screen and (max-width: 600px), (max-height: 800px){
+  @media only screen and (max-width: 360px){
 
-    .bagianfooter {
+  .bagianfooter {
       flex-direction: column;
       padding: 20px;
   }
+
+  .bagiancopyright p{
+    font-size: 12px;
+  }
+
+  
+.logochillfooter{
+  width: 84px;
+  height: 40px;
+}
+
 
   .genre{
     margin-bottom: 25px;
@@ -45,17 +61,12 @@
 
   .chevron{
     display: flex;
-  }
-
-  .genre > .genreheader > .chevron{
-    display: flex;
-    margin-left: 18px;
+    margin-right:10px;
   }
 
   .genreheader, .bantuanheader{
     display: flex;
     justify-content: space-between;
-    width: 100%;
   }
 
   .genre1, .genre2, .genre3, .genre4{
