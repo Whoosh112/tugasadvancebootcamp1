@@ -43,7 +43,7 @@ useEffect(() => {
         <>
         <div className="beranda">
           <div className="navibar">
-              <Navbar onLogout={onLogout}/>
+              <Navbar onLogout={onLogout} onDelete={handleDelete}/>
           </div>
           <div className="hero">
               <Hero />
