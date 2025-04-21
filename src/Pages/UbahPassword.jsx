@@ -42,7 +42,8 @@ function UbahPassword ({onLogout}) {
       await updateUser(loggedUser.id, { password: newPassword });
       localStorage.setItem("user", JSON.stringify({ ...loggedUser, password: newPassword }));
       alert("Password berhasil diubah!");
-      navigate("/login")
+      onLogout();
+      navigate("/login");
 
     } catch {
       setError("Terjadi kesalahan saat mengubah password.");
