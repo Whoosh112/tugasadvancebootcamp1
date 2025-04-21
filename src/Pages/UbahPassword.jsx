@@ -73,7 +73,7 @@ function UbahPassword ({onLogout}) {
            />
           </div>
           <div className="loginbuttonbox">
-            <GantiPasswordBox onClick={(e) => {e.preventDefault(); handleChangePassword(); onLogout()}}/>
+            <GantiPasswordBox onClick={(e) => {e.preventDefault(); handleChangePassword();}}/>
         </div>
   </form>
         )
